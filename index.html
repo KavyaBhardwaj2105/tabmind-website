@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TabMind — Remember why you opened this tab</title>
+<meta name="description" content="TabMind asks why you opened a tab, pins that reason on the page, and taps you on the shoulder if you've drifted. Runs entirely in your browser." />
+<link rel="icon" href="icons/icon32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <a href="#top" class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    TabMind
+  </a>
+  <nav class="topnav" aria-label="Primary">
+    <a href="#features">What it does</a>
+    <a href="#how">How it works</a>
+    <a href="#get">Get it</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">For the forty tabs you forgot you opened</p>
+      <h1 class="hero-title">You opened this tab<br />for a reason.</h1>
+      <p class="hero-sub">
+        TabMind asks why, the moment a tab finishes loading. It pins your answer
+        on the page, and taps you on the shoulder if you've drifted &mdash;
+        without a single byte leaving your machine.
+      </p>
+      <div class="hero-actions">
+        <a href="#get" class="btn btn-primary">Download TabMind</a>
+        <a href="#how" class="btn-text">See how it works &darr;</a>
+      </div>
+    </div>
+
+    <div class="hero-demo" aria-hidden="true">
+      <div class="browser">
+        <div class="browser-tabs">
+          <div class="btab"><span class="btab-dot"></span></div>
+          <div class="btab btab-active">
+            <span class="btab-dot"></span>
+            <span class="btab-label">Booking flights before...</span>
+          </div>
+          <div class="btab"><span class="btab-dot"></span></div>
+          <div class="btab"><span class="btab-dot"></span></div>
+        </div>
+        <div class="browser-bar">
+          <span class="bdot bdot-r"></span><span class="bdot bdot-y"></span><span class="bdot bdot-g"></span>
+          <div class="browser-url">flights.example.com/search</div>
+        </div>
+        <div class="browser-viewport">
+          <div class="pill pill-timer">
+            <span id="demoTimer">00:00</span>
+          </div>
+          <div class="pill pill-reason" id="demoReasonPill">
+            <span id="demoReasonText">Booking flights before the fare goes up</span>
+            <span class="pill-edit-icon">&#9998;</span>
+          </div>
+          <div class="viewport-lines">
+            <div class="vline vline-wide"></div>
+            <div class="vline"></div>
+            <div class="vline vline-mid"></div>
+          </div>
+        </div>
+      </div>
+      <p class="demo-caption">Live demo &mdash; this is the actual pill and timer, ticking in real time.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="section" id="features">
+    <h2 class="section-title">Four small habits, handled for you</h2>
+
+    <div class="feature-grid">
+      <article class="feature">
+        <span class="tab-chip">Ask</span>
+        <h3>One question, once</h3>
+        <p>When a tab finishes loading, TabMind asks why you opened it. One line, no forms &mdash; and it never asks twice for the same tab.</p>
+      </article>
+
+      <article class="feature">
+        <span class="tab-chip">Pin</span>
+        <h3>A reason that stays put</h3>
+        <p>Your answer sits in a small pill, top&#8209;right, on every page you visit in that tab. Click the text to edit it inline, any time.</p>
+      </article>
+
+      <article class="feature">
+        <span class="tab-chip">Time</span>
+        <h3>A running count, top&#8209;left</h3>
+        <p>A quiet timer tracks minutes spent on the tab since it was opened &mdash; so &ldquo;just a quick look&rdquo; can't hide from you.</p>
+      </article>
+
+      <article class="feature">
+        <span class="tab-chip">Nudge</span>
+        <h3>A tap on the shoulder</h3>
+        <p>Every 30 minutes by default &mdash; or however often you set &mdash; Chrome reminds you, in your own words, why the tab is still open.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="section section-alt" id="how">
+    <h2 class="section-title">How it actually runs</h2>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num">01</span>
+        <div>
+          <h3>Open a tab</h3>
+          <p>TabMind notices the moment it finishes loading and asks why, right there on the page &mdash; no popup blocked, no extra window.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num">02</span>
+        <div>
+          <h3>Answer, or skip it</h3>
+          <p>Type a reason, or skip. Either way you won't be asked again for that specific tab &mdash; even as you click through several pages in it.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-num">03</span>
+        <div>
+          <h3>Stay honest</h3>
+          <p>The reason and a timer stay pinned while you browse. Drift too long, and a notification reads your own words back to you.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===================== DOWNLOAD / PRIVACY TEASER ===================== -->
+  <section class="section" id="get">
+    <div class="get-card">
+      <div class="get-copy">
+        <h2 class="section-title">Nothing here talks to a server</h2>
+        <p>
+          TabMind runs entirely inside Chrome. Every reason and every timestamp stays in
+          <code>chrome.storage.local</code> on your device &mdash; nothing is uploaded, tracked, or sold.
+          <a href="privacy.html">Read the full privacy policy &rarr;</a>
+        </p>
+
+        <div class="hero-actions">
+          <a href="tabmind-extension.zip" class="btn btn-primary" download>Download TabMind (.zip)</a>
+        </div>
+        <p class="get-note">Chrome Web Store listing coming soon &mdash; for now, load it as an unpacked extension.</p>
+      </div>
+
+      <ol class="install-steps">
+        <li>Unzip the download somewhere permanent.</li>
+        <li>Open <code>chrome://extensions</code> and turn on <strong>Developer mode</strong>.</li>
+        <li>Click <strong>Load unpacked</strong> and select the unzipped folder.</li>
+        <li>Open a new tab &mdash; TabMind will ask why.</li>
+      </ol>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-row">
+    <span>&copy; <span id="year"></span> TabMind</span>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <span class="footer-dot">&middot;</span>
+      <span>Permissions used: storage, alarms, notifications</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

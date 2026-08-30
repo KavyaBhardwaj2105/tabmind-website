@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — TabMind</title>
+<meta name="description" content="TabMind's privacy policy: what it stores, why, and where it goes (nowhere)." />
+<link rel="icon" href="icons/icon32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .legal {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 100px;
+  }
+  .legal h1 {
+    font-family: var(--display);
+    font-size: clamp(30px, 4vw, 40px);
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .legal .updated {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin: 0 0 40px;
+  }
+  .legal h2 {
+    font-family: var(--display);
+    font-size: 19px;
+    margin: 40px 0 12px;
+    letter-spacing: -0.01em;
+  }
+  .legal p, .legal li {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .legal ul { padding-left: 20px; }
+  .legal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 14px;
+  }
+  .legal th, .legal td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .legal th {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+  }
+  .legal code {
+    font-size: 0.9em;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 28px;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--line);
+  }
+  .back-link:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="index.html" class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    TabMind
+  </a>
+  <nav class="topnav" aria-label="Primary">
+    <a href="index.html#features">What it does</a>
+    <a href="index.html#how">How it works</a>
+    <a href="index.html#get">Get it</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</header>
+
+<main>
+  <div class="legal">
+    <a href="index.html" class="back-link">&larr; Back to TabMind</a>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: August 30, 2026</p>
+
+    <p>
+      TabMind is a Chrome extension that asks why you opened a tab and reminds you later.
+      This page explains, plainly, what it stores and what it does with it. The short version:
+      everything stays on your device, and nothing is ever sent anywhere.
+    </p>
+
+    <h2>What TabMind stores</h2>
+    <p>When you type a reason for a tab, TabMind saves three things, locally, using Chrome's
+      built-in <code>chrome.storage.local</code> API:</p>
+    <ul>
+      <li>The reason text you typed (up to 300 characters)</li>
+      <li>The time you saved that reason</li>
+      <li>The time the tab itself was opened</li>
+    </ul>
+    <p>
+      It also stores your own preferences &mdash; whether the reason and timer pills are shown,
+      the pill's opacity, and how often you want to be reminded.
+    </p>
+    <p>
+      None of this data ever leaves your browser. TabMind has no server, makes no network
+      requests, includes no analytics or tracking libraries, and does not use cookies.
+    </p>
+
+    <h2>Permissions, and why each one is needed</h2>
+    <table>
+      <thead>
+        <tr><th>Permission</th><th>What it's used for</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>storage</code></td>
+          <td>Saves your reasons and settings locally on your device, so they survive a browser restart.</td>
+        </tr>
+        <tr>
+          <td><code>alarms</code></td>
+          <td>Schedules the periodic reminder without keeping TabMind's background process running continuously.</td>
+        </tr>
+        <tr>
+          <td><code>notifications</code></td>
+          <td>Shows the reminder itself, using Chrome's native notification system.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>TabMind does not request access to your browsing history, tab URLs, page content, or any other site data.</p>
+
+    <h2>How long data is kept</h2>
+    <p>
+      A tab's saved reason is automatically deleted the moment that tab is closed. Uninstalling
+      the extension removes everything TabMind ever stored, since it all lives in Chrome's local
+      storage for the extension and nowhere else.
+    </p>
+
+    <h2>Third parties</h2>
+    <p>
+      TabMind does not share data with anyone, because it does not collect or transmit data in
+      the first place. There are no third-party SDKs, ad networks, or analytics services in this extension.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If this policy changes, the &ldquo;last updated&rdquo; date above will change with it.
+      Material changes will also be noted in the extension's Chrome Web Store listing.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy or how TabMind handles data can be sent to
+      <a href="mailto:kb179476@gmail.com">hello@example.com</a>.
+      <em>(Replace this with your real support address before publishing.)</em>
+    </p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-row">
+    <span>&copy; <span id="year"></span> TabMind</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <span class="footer-dot">&middot;</span>
+      <span>Permissions used: storage, alarms, notifications</span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
