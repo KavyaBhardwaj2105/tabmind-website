@@ -1,4 +1,5 @@
 # TabMind — landing page
+```this is just a trial project for people who forget to close their unneccessary tabs```
 
 Plain HTML/CSS/JS static site. Koi build step nahi hai — jaise hai waise hi deploy ho jaayega.
 
